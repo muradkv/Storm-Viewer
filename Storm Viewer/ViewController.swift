@@ -29,6 +29,18 @@ class ViewController: UITableViewController {
         print(arrayOfImages)
     }
 
-
+    //MARK: TableView Methods
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayOfImages.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
+        cell.textLabel?.text = arrayOfImages[indexPath.row]
+        
+        return cell
+    }
 }
 
