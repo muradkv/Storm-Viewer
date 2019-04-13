@@ -51,7 +51,7 @@
         <!--Detail View Controller-->
         <scene sceneID="lgp-pC-pEJ">
             <objects>
-                <viewController id="98L-ag-Dm1" customClass="DetailViewController" customModule="Storm_Viewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Detail" id="98L-ag-Dm1" customClass="DetailViewController" customModule="Storm_Viewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WCM-3s-eRH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
