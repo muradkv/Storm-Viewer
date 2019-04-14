@@ -26,6 +26,8 @@ class ViewController: UITableViewController {
             }
         }
         
+        title = "Storm Viwer"
+        
         print(arrayOfImages)
     }
 
