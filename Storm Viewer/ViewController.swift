@@ -28,6 +28,8 @@ class ViewController: UITableViewController {
         
         title = "Storm Viwer"
         
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         print(arrayOfImages)
     }
 

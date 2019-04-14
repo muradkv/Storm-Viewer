@@ -22,6 +22,8 @@ class DetailViewController: UIViewController {
         }
         
         title = selectedImage
+        
+        navigationItem.largeTitleDisplayMode = .never
     }
     
     override func viewWillAppear(_ animated: Bool) {
