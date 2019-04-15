@@ -11,7 +11,9 @@ import UIKit
 class DetailViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     
-    var selectedImage: String? 
+    var selectedImage: String?
+    var selectedPositionOnArray: Int = 0
+    var arrayCount: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,7 @@ class DetailViewController: UIViewController {
             imageView.image = UIImage(named: imageToLoad)
         }
         
-        title = selectedImage
+        title = "Picture \(selectedPositionOnArray) of \(arrayCount)"
         
         navigationItem.largeTitleDisplayMode = .never
     }

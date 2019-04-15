@@ -26,6 +26,8 @@ class ViewController: UITableViewController {
             }
         }
         
+        arrayOfImages.sort()
+        
         title = "Storm Viwer"
         
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -50,6 +52,8 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
             vc.selectedImage = arrayOfImages[indexPath.row]
+            vc.selectedPositionOnArray = arrayOfImages.index(after: indexPath.row)
+            vc.arrayCount = arrayOfImages.count
             navigationController?.pushViewController(vc, animated: true)
         }
     }
