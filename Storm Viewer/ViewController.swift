@@ -30,6 +30,8 @@ class ViewController: UITableViewController {
         
         title = "Storm Viwer"
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector (shareTapped))
+        
         navigationController?.navigationBar.prefersLargeTitles = true
         
         print(arrayOfImages)
@@ -57,5 +59,12 @@ class ViewController: UITableViewController {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
+    
+    @objc func shareTapped() {
+        let vc = UIActivityViewController(activityItems: ["I really like that App!"], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
+    }
+
 }
 
