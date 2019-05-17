@@ -16,13 +16,15 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let fm = FileManager.default
-        let path = Bundle.main.resourcePath
-        let items = try! fm.contentsOfDirectory(atPath: path!)
-        
-        for item in items {
-            if item.hasPrefix("nssl") {
-                arrayOfImages.append(item)
+        DispatchQueue.global().async {
+            let fm = FileManager.default
+            let path = Bundle.main.resourcePath
+            let items = try! fm.contentsOfDirectory(atPath: path!)
+            
+            for item in items {
+                if item.hasPrefix("nssl") {
+                    self.arrayOfImages.append(item)
+                }
             }
         }
         
